@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹퍼블 기말2</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header{
+            display: flex;
+
+            width: 100%;
+            height: 100px;
+
+            padding-left: 40px;
+            padding-right: 80px;
+            padding-top: 8px;
+
+            justify-content: space-between;
+            align-items: center;
+
+            background-color: #372929;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+        }
+
+        .header a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .header h1{
+            font-size: 24px;
+            color: white;
+            
+        }
+
+        .header ul {
+            display: flex;
+            gap: 60px;
+
+            flex: 1;
+            justify-content: flex-end;
+            /* padding-right: 40px; */
+            
+        }
+
+        .header ul li {
+            list-style: none;
+        }
+
+        .header ul li a {
+            text-decoration: none;
+            font-size: 16px;
+            color:rgba(255, 255, 255);
+            opacity: 0.2;
+            transition: opacity 0.3s ease;
+        }
+
+        .header ul li a:hover{
+            opacity: 1;
+        }
+
+        .intro{
+            background-color: #422222;
+            width: 100%;
+            height: 550px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 60px;
+            padding-right: 60px;
+            /* padding-top: 30px; */
+            gap: 100px;
+        }
+
+        .intro-content{
+            padding-top: 20px;
+            width: 50vw;
+        }
+
+        .intro-content h1{
+            color: white;
+            font-size: 32px;
+
+        }
+
+        .intro-content h2{
+            color: #dddddd;
+            font-size: 16px;
+            padding-top: 40px;
+            font-weight: 300;
+        }
+
+        .intro-content h3{
+            color: #dddddd;
+            font-size: 14px;
+            padding-top: 20px;
+            font-weight: 300;
+        }
+
+        .history{
+            background-color: #372929;
+            width: 100%;
+            height: 550px;
+
+            display: flex;
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* padding-left: 60px; */
+            /* padding-right: 60px; */
+            /* padding-top: 30px; */
+            /* gap: 100px; */
+        }
+
+        .history-img{
+            background-image: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTAyMThfMjMz%2FMDAxNTUwNDc2MjgzMzY0.LFa3gDQaWG3FEeNIuxiiYvYNYDfQ1_tyLNvwjrKLfDcg.bwuvHaA9qm76iSxHxK9odNzYhp1NLh9lnNoUgOpD-f0g.JPEG.wikimpr%2FHot_Issue2_3.%25B9%25E8%25C3%25DF%25B1%25E8%25C4%25A1.jpg&type=sc960_832");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 550px;
+            width: 300vw;
+        }
+
+        .history-content{
+            /* text-align: center; */
+            min-width: 300px;
+            width: 250vw;
+            padding-left: 100px;
+            padding-right: 100px;
+            
+        }
+
+        .history-content h1{
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            padding-top: 100px;
+            /* background-color: aquamarine; */
+            padding-bottom: 24px;
+            border-bottom: 2px solid;
+        }
+
+        .history-content p{
+            color: #dddddd;
+            text-align: justify;
+            font-size: 16px;
+            padding-top: 20px;
+            font-weight: 100;
+            line-height:28px;
+            
+            /* background-color: aquamarine; */
+            
+        }
+
+        .effect{
+            width: 100%;
+            height: 1140px;
+            background-color: #422222;
+        }
+
+        .effect h1{
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            padding-top: 100px;
+        }
+
+        .effect h2{
+            color: #dddddd;
+            text-align: center;
+            font-size: 14px;
+            padding-top: 24px;
+            font-weight: 100;
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 60px;
+            line-height:20px;
+        }
+
+        .effect-img{
+            background-image: url("https://assets.website-files.com/60f7c5a941614b93a78bbb7e/61e8b8162b1f6bbab478471e_image_1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 700px;
+            width: 100%;
+        }
+
+        .tag{
+            /* width: 80%; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80vw;
+        }
+
+        .tag h3{
+            color: #DBB56C;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .footer{
+            width: 100%;
+            height: 200px;
+            background-color: #372929;
+
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+
+            padding-top: 60px;
+            padding-left: 80px;
+        }
+
+        .footer-logo{
+            color: #dddddd;
+            font-size: 24px;
+            font-weight: 600;
+            
+            
+        }
+
+        .footer-content{
+            margin-left: auto;
+            margin-right: auto;
+            width: 50vw;
+        }
+
+        .footer-content h1{
+            margin-left: auto;
+            margin-right: auto;
+
+            color: #dddddd;
+            font-size: 16px;
+            font-weight: 300;
+            padding-bottom: 8px;
+        }
+
+        .footer-content h2{
+            margin-left: auto;
+            margin-right: auto;
+
+            color: #dddddd;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <h1><a href="index.html">KIMCHI</a></h1>
+
+        <ul>
+            <li><a href="history.html">History</a></li>
+            <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="how to make.html">How to Make</a></li>
+            <li><a href="#">News</a></li>
+        </ul>
+    </div>
+
+    <div class="intro">
+        <div class="intro-content">
+        <h1>KIMCHI, 김치</h1>
+        <h2>김치는 한국의 전통 발효식품이자 일종의 조리 양식이다.
+            소금물에 절이고 발효시켜 보관성을 높인 채소를 
+            갖은 양념으로 맛을 내어 먹는 음식. </h2>
+        <h3>Kimchi is a traditional Korean fermented food and a kind of cooking style. 
+            Vegetables that are more storable by fermenting them in salted waterfood 
+            flavored with various spices</h3>
+        </div>
+
+        <div class="intro-img">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20211126_293%2F1637915889604OkiVD_JPEG%2F39051673260474428_824403117.jpg&type=sc960_832" 
+            width="388px" alt="">
+        </div>
+    </div>
+
+    <div class="history">
+        <div class="history-img">
+            <!-- <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTAyMThfMjMz%2FMDAxNTUwNDc2MjgzMzY0.LFa3gDQaWG3FEeNIuxiiYvYNYDfQ1_tyLNvwjrKLfDcg.bwuvHaA9qm76iSxHxK9odNzYhp1NLh9lnNoUgOpD-f0g.JPEG.wikimpr%2FHot_Issue2_3.%25B9%25E8%25C3%25DF%25B1%25E8%25C4%25A1.jpg&type=sc960_832" 
+            height="550px" alt=""> -->
+        </div>
+        <div class="history-content">
+            <h1>HISTORY of 김치</h1>
+            <p>김치라는 음식 자체의 직접적인 유래는 추적하기 애매하다. 명료하게 요약해서 소급하자면, 농경 민족들에게 나타나던 '채소를 소금에 절여 장기 보관한 형태의 음식'으로 유래를 추적할 수 있지만, 반대로 따지자면 아주 오래전부터 있던 한민족의 그런 음식 중 어느 시점부터가 지금의 김치라고 부를 수 있는지 나누기 애매하기 때문이다.그러한 단순한 야채 염장 음식은 , 대한민국의 상고 시대부터 있었다고 할 수 있다.《삼국지》 위지동이전에는 "고구려에서는 발효식품을 만들어 먹었다."라는 기록이 전해져 오며 《정창원고문서》에는 수수보리저(須須保里菹), 현재의 김치 비슷한 것을 만들어 일본으로 보냈다는 기록이 남아있다. 또한 《삼국사기》에도 김치와 비슷한 발효식품이 기록되어 있다.
+            </p>
+        </div>
+    </div>
+
+        <div class="effect">
+            <h1>"김치의 효능"</h1>
+            <h2>미국의 건강 연구지 헬스지가 2008년 3월 24일 게재한 기사에서 스페인 올리브유, 그리스 요구르트, 인도 렌틸콩, 일본의 낫토와 함께 한국의 김치가 
+                세계 5대 건강 식품으로 선정되었다.</h2>
+
+            <div class="effect-img"></div>
+
+            <div class="tag">
+                <h3># 알레르기 질환 예방</h3>
+                <h3># 소화 능력 향상</h3>
+                <h3># 항암효과</h3>
+                <h3># 콜레스테롤 조절</h3>
+                <h3># 눈 건강 및 피부미용</h3>
+                <h3># 다이어트</h3> 
+                <h3># 면역력 강화</h3>
+                <h3># 당뇨 예방 및 노화 방지</h3>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-logo">KIMCHI</div>
+            <div class="footer-content">
+                <h1>“김치”는 한국의 전통음식을 소개하고, 그 전통을 지키기 위한
+                    김치 소개 사이트입니다.</h1>
+                <h2>"Kimchi" introduces Korean traditional food and keeps the traditional food
+                    This is a kimchi introduction site.</h2>
+            </div>
+        </div>
+
+    
+        
+</body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹퍼블 기말1</title>
+
+    <style>
+
+/* @font-face {
+    font-family: 'HancomUljuCheonjeonri';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205-2@1.0/HancomUljuCheonjeonri.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'HancomUljuCheonjeonri';
+} */
+
+*{
+ 
+  margin:0; padding:0;
+  box-sizing: border-box;
+} 
+
+
+
+.header {
+  position: relative;
+  height: 860px;
+    
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+  url("http://www.saerounkimchi.co.kr/shopimages/saedongne/mobile/2/1020372_represent") ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+ 
+}
+
+.header .helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+#navbar {
+    /* 위아래,좌우/ y,x */
+  padding: 60px 80px; 
+  position: absolute;
+  top: 0;
+}
+
+#logo {
+  color: white;
+  font-size: 32px;
+  text-decoration: none;
+  font-weight: bold;
+  /* background-color: aliceblue; */
+}
+
+.info {
+  color: white;
+  text-align: left;
+  padding-left: 80px;
+  margin-top: 260px;
+  display: inline-block;
+  /* width: 100%; */
+  text-decoration: none;
+  /* vertical-align: middle; */
+  /* background-color: aliceblue; */
+}
+
+.info h1 {
+  margin-top: 0;
+  margin-bottom: 44px;
+  font-size: 24px;
+  text-decoration: none;
+  color:rgba(255, 255, 255);
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+  
+}
+
+.info a{
+    text-decoration: none;
+}
+
+.h1{
+    text-decoration: none;
+}
+
+.info h1:hover{
+    color:rgba(255, 255, 255, 0.8)
+    /* 애니메이션 효과도 넣기 */
+}
+
+.content-1{
+    background-color: #372929;
+    text-align: center;
+    padding-bottom: 120px;
+}
+
+.kind h3{
+    padding-top: 60px;
+    padding-bottom: 0px;
+    margin: 0px;
+    color: #DBB56C;
+    font-weight: 400;
+    font-size: 20px;
+    /* background-color: aqua; */
+}
+
+.kind h2{
+    margin-top: 0px;
+    margin-bottom: 100px;
+    padding-top: 8px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 32px;
+    /* background-color: rgb(35, 95, 95); */
+}
+
+.fiveimg{
+        margin-left: auto;
+        margin-right: auto;
+
+		/* font-size: 30px;
+		font-weight: bold; */
+		height: 600px;
+        width: 80vw;
+        /* background-color: grey; */
+        /*border: 5px solid black; */
+		display: flex;
+		flex-direction: row;
+        
+	}
+
+.fiveimg a{
+    display: block;
+    /* padding: 10px 20px; */
+    /* border: 1px solid black; */
+    
+    flex-grow: 1; 
+    flex-basis: 0;
+    
+    text-align: center;
+	text-decoration: none;
+	color: white;
+    /* background-color: yellow; */
+    
+    display: row;
+    align-items: center;
+    
+    transition: flex-grow 0.5s ease 0s;
+    
+    /*     배경이미지 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	}
+
+.fiveimg a:hover{
+    flex-grow: 3;
+	}
+
+.fiveimg h1{
+    font-size: 30px;
+    padding-top: 183px;
+    /* margin-top: 183px; */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}   
+
+.fiveimg h2{
+    font-size: 16px;
+    font-weight: 100;
+    margin-top: 8px;
+    opacity: 0;
+}  
+
+.fiveimg h3{
+    font-size: 20px;
+    font-weight: 100;
+    margin-top: 60px;
+    opacity: 0;
+    color: #dddddd;
+} 
+
+
+.img1 {
+  background-image: url(http://gdimg.gmarket.co.kr/2299895828/still/600?ver=1639373690);
+  
+}
+
+.img2 {
+  background-image: url(https://simg.ssgcdn.com/trans.ssg?src=/cmpt/edit/202008/10/152020081015250354944596595559_170.jpg&w=830&t=e8d09066de8d0405db1ba4cf6bf7fa7e3e41c27e);
+  
+}
+.img3 {
+  background-image: url(https://www.bgw.kr/wp-content/uploads/2019/12/%EB%8F%99%EC%B9%98%EB%AF%B8122.png);
+  
+}
+
+.img4 {
+  background-image: url(https://www.ghostfreshmart.com/wp-content/uploads/2020/04/%ED%8C%8C%EA%B9%80%EC%B9%98.jpg);
+  
+}
+
+.img5 {
+  background-image: url(https://m.convenii.com/web/product/big/202103/d535a2ccfd001232f421ddce9aacaa57.jpg);
+  
+}
+
+a .overlay{
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+    transition: all 0.7s ease;
+}
+
+a:hover .overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+a:hover h1, a:hover h2, a:hover h3{
+    opacity: 1;
+}
+
+.eat{
+    width: 100%;
+    height: 940px;
+    background-color: #422222;
+}
+
+.eat h1{
+    text-align: center;
+    font-size: 36px;
+    color: #ffffff;
+    padding-top: 100px;
+}
+
+.eat p{
+    text-align: center;
+    font-size: 18px;
+    color: #dddddd;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.video{
+    text-align: center;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.news{
+    width: 100%;
+    height: 587px;
+    background-color: #4a2121;
+    padding-left: 80px;
+}
+
+.news h1{
+    color: #ffffff;
+    font-size: 36px;
+    padding-top: 60px;
+}
+
+.more{
+    text-align: right;
+    padding-right: 80px;
+    text-decoration: none;
+    padding-bottom: 28px;
+    /* background-color: rgb(8, 8, 8); */
+}
+
+.more a{
+    text-decoration: none;
+}
+
+.more h2{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+
+}
+
+.card {
+    display: flex;
+	flex-direction: row;
+    /* width: 1120px; */
+    /* align-items: center; */
+    /* display: row;
+    align-items: center; */
+    /* background-color: #493819; */
+    text-decoration: none;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding-right: 80px;
+ 
+}
+
+.card a{
+    align-items: center;
+    width: 335px;
+    /* background-color: #DBB56C; */
+    text-decoration: none;
+    
+}
+
+.card-img img{
+    padding-bottom: 16px;
+}
+
+.card-img h1{
+    font-size: 20px;
+    color: white;
+    /* background-color: aqua; */
+    padding-top: 8px;
+    border-top: 2px solid;
+}
+
+.card-img p{
+    font-size: 14px;
+    color: #dddddd;
+    /* background-color: aqua; */
+    padding-top: 8px;
+
+}
+
+.footer{
+    width: 100%;
+    height: 200px;
+    background-color: #372929;
+
+    display: flex;
+	flex-direction: row;
+    align-content: center;
+
+    padding-top: 60px;
+    padding-left: 80px;
+}
+
+.footer-logo{
+    color: #dddddd;
+    font-size: 24px;
+    font-weight: 600;
+    
+    
+}
+
+.footer-content{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    min-width: 300px;
+}
+
+.footer-content h1{
+    margin-left: auto;
+    margin-right: auto;
+
+    color: #dddddd;
+    font-size: 16px;
+    font-weight: 300;
+    padding-bottom: 8px;
+}
+
+.footer-content h2{
+    margin-left: auto;
+    margin-right: auto;
+
+    color: #dddddd;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+	    <div id="navbar">
+	      <a href="index.html" id="logo">KIMCHI</a>
+	    </div>
+
+	      <div class="info">
+	      <a href="history.html"><h1>역사:History</h1></a>
+	      <a href="introduction.html"><h1>소개:Introduction</h1></a>
+          <a href="how to make.html"><h1>김장과정:How to Make</h1></a>
+          <a href="#"><h1>뉴스:News</h1></a>
+
+	    </div>
+    </div>
+
+        <div class="content-1">
+            <div class="kind">
+                <h3>Kind of kimchi</h3>
+                <h2>다양한 김치의 종류</h2>
+            </div>
+
+            <div class="fiveimg">
+                <a class="img1" href="introduction.html">
+                    <div class="overlay">
+                    <h1>배추김치</h1>
+                    <h2>Baechu kimchi</h2>
+                    <h3>매일 먹어도 질리지 않는
+                        아삭아삭 배추김치</h3>
+                        </div>
+                    </a>
+                    <a class="img3" href="introduction-2.html">
+                        <div class="overlay">
+                            <h1>동치미</h1>
+                            <h2>dongchim</h2>
+                            <h3>시원하고 깔끔한 국물이 있는 동치미</h3>
+                            </div>
+                    </a>
+                    <a class="img2" href="#">
+                        <div class="overlay">
+                            <h1>깍두기</h1>
+                            <h2>kkakdugi</h2>
+                            <h3>귀여운 사각형의
+                                먹는 재미가 있는 깍두기
+                            </h3>
+                            </div>
+                    </a>
+                    <a class="img4" href="#">
+                        <div class="overlay">
+                            <h1>파김치</h1>
+                            <h2>green onion kimchi</h2>
+                            <h3>파와 김치가 어우러진 파김치</h3>
+                            </div>
+                    </a>
+                    <a class="img5" href="#">
+                        <div class="overlay">
+                            <h1>총각김치</h1>
+                            <h2>chonggak kimchi</h2>
+                            <h3>아삭아삭 식감의 총각김치</h3>
+                            </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="eat">
+            <h1>“이번달 최고의 김치 먹방”</h1>
+            <p>매달 가장 많은 조회수와 좋아요, 댓글을 받은 영상으로
+                한국의 김치를 맛있게 식사하는 영상</p>
+            <div class="video">
+                <iframe width="960" height="540" src="https://www.youtube.com/embed/tm8h8dAm5jc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="news">
+            <h1>NEWs</h1>
+            <div class="more">
+                <a href="#">
+                <h2>more ></h2>
+                <!-- <img src="" alt=""> -->
+                </a>
+            </div>
+
+                <li class="card">
+                    <a class="card-img" href="#">
+                        <img src="https://img.asiatoday.co.kr/file/2022y/11m/28d/2022112801002636800149391.jpg" width="335" height="200px" alt="">
+                        <div class="card-content">
+                            <h1>여의도순복음교회, 사랑의 김치 나눔</h1>
+                            <p>여의도순복음교회는 지난 26일 교회 앞 베다니광장에서 장애인...</p>
+                        </div>
+                    </a>
+
+                    <a class="card-img" href="#">
+                        <img src="https://thumb.mt.co.kr/06/2022/11/2022112713563540884_1.jpg/dims/optimize/" width="335" height="200px" alt="">
+                        <div class="card-content">
+                            <h1>한복, 김치 이어 피라미드도 중국 것?</h1>
+                            <p>중국 한 공무원이 "이집트 문명을 만든 건 중국인"이라는 황당한...</p>
+                        </div>
+                    </a>
+
+                    <a class="card-img" href="#">
+                        <img src="https://news.imaeil.com/photos/2022/12/12/2022121215194186015_l.jpg" width="335" height="200px" alt="">
+                        <!-- <img src="http://www.ikpnews.net/news/photo/202211/49209_34852_3216.jpg" width="335" height="200px" alt=""> -->
+                        <div class="card-content">
+                            <h1>농협, 김치의 날 김장나눔 행사</h1>
+                            <p>농협경제지주(농업경제대표이사 우성태)는 지난 22일 정부 김치의 날...</p>
+                        </div>
+                    </a>
+                </li>          
+        </div>
+
+        <div class="footer">
+            <div class="footer-logo">KIMCHI</div>
+            <div class="footer-content">
+                <h1>“김치”는 한국의 전통음식을 소개하고, 그 전통을 지키기 위한
+                    김치 소개 사이트입니다.</h1>
+                <h2>"Kimchi" introduces Korean traditional food and keeps the traditional food
+                    This is a kimchi introduction site.</h2>
+            </div>
+        </div>
+	 
+       
+</body>
+</html>

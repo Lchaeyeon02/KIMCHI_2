@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹퍼블 기말3</title>
+
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header{
+            display: flex;
+
+            width: 100%;
+            height: 100px;
+
+            padding-left: 40px;
+            padding-right: 80px;
+            padding-top: 8px;
+
+            justify-content: space-between;
+            align-items: center;
+
+            background-color: #372929;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+        }
+
+        .header a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .header h1{
+            font-size: 24px;
+            color: white;
+            
+        }
+
+        .header ul {
+            display: flex;
+            gap: 60px;
+
+            flex: 1;
+            justify-content: flex-end;
+            /* padding-right: 40px; */
+            
+        }
+
+        .header ul li {
+            list-style: none;
+        }
+
+        .header ul li a {
+            text-decoration: none;
+            font-size: 16px;
+            color:rgba(255, 255, 255);
+            opacity: 0.2;
+            transition: opacity 0.3s ease;
+        }
+
+        .header ul li a:hover{
+            opacity: 1;
+        }
+
+        .main{
+            position: relative;
+            width: 100%;
+            height: 720px;
+
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), 
+            url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FRqp1B%2FbtqLENWEYQr%2F56yfXOWiTz9QxRvdSTgk70%2Fimg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .main-content{
+            /* background-color: aqua; */
+
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            /* align-items: center; */
+            
+        
+        }
+
+        .main-content h1{
+            color: white;
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing :15px;
+            padding-left: 15px;
+            text-align: center;
+            padding-top: 250px;
+        }
+
+        .main-content h2{
+            color: #DBB56C;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: center;
+            padding-top: 4px;
+            letter-spacing :5px;
+            padding-left: 5px;
+        }
+
+        .main-content p{
+            color: #dddddd;
+            font-size: 16px;
+            font-weight: 300;
+            text-align: center;
+            padding-top: 32px;
+            line-height:28px;
+        }
+
+        .intro{
+            background-color: #422222;
+            width: 100%;
+            height: 840px;
+            padding-top: 120px;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .intro-1{
+            /* background-color: aqua; */
+            width: 80vw;
+            height: 100%;
+            
+            display: flex;
+            justify-content: center;
+           
+        }
+
+        .intro-img{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .intro-contents{
+            margin-left: 10vw;
+            text-align: right;
+            padding-top: 40px;
+        }
+
+        .intro-contents h1{
+            color: #DBB56C;
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing :10px;
+            padding-left: 10px;
+            /* text-align: center; */
+            padding-bottom: 80px;
+        }
+
+        .intro-contents h2{
+            color: #dddddd;
+            font-size: 16px;
+            font-weight: 300;
+            /* text-align: center; */
+            padding-bottom: 20px;
+            line-height:35px;
+        }
+
+        .intro-contents h3{
+            color: #dddddd;
+            font-size: 14px;
+            font-weight: 300;
+            /* text-align: center; */
+            /* padding-bottom: 20px; */
+            line-height:30px;
+        }
+
+        .kide{
+            background-color: #DBB56C;
+            width: 100%;
+            height: 945px;
+            padding-top: 60px;
+        }
+
+        .kide-1{
+            /* background-color: #422222; */
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            margin-left: auto;
+            margin-right: auto;
+
+            width: 970px;
+            margin-bottom: 60px;
+        }
+
+        .kide-1 h1{
+            color: #4A2121;
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing :5px;
+            padding-left: 5px;
+            /* text-align: center; */
+            /* padding-bottom: 80px; */
+        }
+
+        .kide-1 h2{
+            color: #4A2121;
+            font-size: 18px;
+            font-weight: 300;
+            /* text-align: center; */
+            /* padding-bottom: 80px; */
+        }
+
+        .kide-contents{
+            margin-left: auto;
+            margin-right: auto;
+
+            width: 970px;
+
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+
+        }
+
+        .kide-contents img{
+            width: 220px;
+            height: 220px;
+            
+            box-shadow:  3px 3px 8px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .img:hover{
+            transform: scale(1.1);
+        }
+
+        .footer{
+            width: 100%;
+            height: 200px;
+            background-color: #372929;
+
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+
+            padding-top: 60px;
+            padding-left: 80px;
+        }
+
+        .footer-logo{
+            color: #dddddd;
+            font-size: 24px;
+            font-weight: 600;
+            
+            
+        }
+
+        .footer-content{
+            margin-left: auto;
+            margin-right: auto;
+            width: 50vw;
+        }
+
+        .footer-content h1{
+            margin-left: auto;
+            margin-right: auto;
+
+            color: #dddddd;
+            font-size: 16px;
+            font-weight: 300;
+            padding-bottom: 8px;
+        }
+
+        .footer-content h2{
+            margin-left: auto;
+            margin-right: auto;
+
+            color: #dddddd;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <h1><a href="index.html">KIMCHI</a></h1>
+
+        <ul>
+            <li><a href="history.html">History</a></li>
+            <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="how to make.html">How to Make</a></li>
+            <li><a href="#">News</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="main-content">
+            <h1>배추김치</h1>
+            <h2>Baechu kimch</h2>
+            <p>통배추를 쪼개서 소금물에 절인 다음 양념을 버무려 만든 김치다. 김치들 중 대표적인 
+               <br> 김치인 만큼 보통 김치라 하면 배추김치를 가리킴과 동시에 가장 많이 해 먹는다.</p>
+        </div>
+    </div>
+
+    <div class="intro">
+        <div class="intro-1">
+        <div class="intro-img">
+            <img src="https://m.rainbowfood.co.kr/web/product/big/202203/de75f295f45209fd66d27f9a34dfcdbf.jpg" 
+            width="410vw" height="320vw" alt="">
+            <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FRqp1B%2FbtqLENWEYQr%2F56yfXOWiTz9QxRvdSTgk70%2Fimg.png" 
+            width="410vw" alt="">
+        </div>
+
+        <div class="intro-contents">
+            <h1>Baechu kimchi</h1>
+            <h2>배추는 가을철에 많이 재배하는데, 
+                이는 서늘한 기후가 지속되는 가을철이 배추 재배에 유리하기 때문이다.
+                반면 봄에 재배하면 한창 자랄 시기인 여름에 잦은 장마나 
+                무더위로 인해 재배하기 어렵다. 
+                실제로 배추의 질도 가을 배추가 가장 좋다. 
+                또한 가을철에는 겨울에 먹기 위해 김장김치로 많이 담그기도 하는데, 
+                이러한 통배추 김치 형태로 담가 먹는다.</h2>
+            <h3>Cabbage is grown a lot in autumnThis is because autumn, when the cool climate persists, is advantageous for cabbage cultivation.On the other hand, if you grow it in spring, you can see frequent rainy seasons in summer,It is difficult to grow because of the heat.In fact, autumn cabbage is the best quality.Also, in the fall season, we make a lot of kimchi to eat in the winterDip it in the form of whole cabbage kimchi.
+            </h3>    
+        </div>
+    </div>
+    </div>
+
+    <div class="kide">
+        <div class="kide-1">
+            <h1>Kind of 김치</h1>
+            <h2>다양한 종류의 김치를 구경해보세요.</h2>
+        </div>
+
+        <div class="kide-contents">
+            <a class="img" href="introduction-2.html">
+                            <img src="https://www.bgw.kr/wp-content/uploads/2019/12/%EB%8F%99%EC%B9%98%EB%AF%B8122.png" alt="">
+                            </a>
+
+            <a class="img" href="#">
+                <img src="https://simg.ssgcdn.com/trans.ssg?src=/cmpt/edit/202008/10/152020081015250354944596595559_170.jpg&w=830&t=e8d09066de8d0405db1ba4cf6bf7fa7e3e41c27e" alt="">
+                </a>
+
+            
+
+            <a class="img" href="#">
+                <img src="https://www.ghostfreshmart.com/wp-content/uploads/2020/04/%ED%8C%8C%EA%B9%80%EC%B9%98.jpg" alt="">
+                </a>
+
+            <a class="img" href="#">
+                <img src="https://m.convenii.com/web/product/big/202103/d535a2ccfd001232f421ddce9aacaa57.jpg" alt="">
+                </a>
+                <a class="img" href="#">
+                    <img src="https://w.namu.la/s/be7e08d79c6f8f44c6a3a9df7e598c9f83eb9b7127a9064ee4820306de4b134a6debfce9b3b462c43e34ba482448a629c8803d2bab05abdaebf2b067e3370daf78e64a859096236b73c7e7434bc383d1d178db705ef3628b5cf1f9aa41d55d88" alt="">
+                    </a>
+    
+                <a class="img" href="#">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkre-GcNxmUpN7O3_LrX6Z44M1_NYyqb6KLw&usqp=CAU" alt="">
+                    </a>
+    
+                <a class="img" href="#">
+                    <img src="https://jinganebanchan.com/web/product/big/201809/6474e7bb6067bef0ad147fbd696d3f2d.jpg" alt="">
+                    </a>
+    
+                <a class="img" href="#">
+                    <img src="https://static.wtable.co.kr/image/production/service/recipe/230/7b0cc6e4-63c6-4caa-b97c-213fbb9a537c.jpg" alt="">
+                    </a> 
+                    
+                    <a class="img" href="#">
+                        <img src="http://www.saerounkimchi.co.kr/shopimages/saedongne/mobile/5/1047415_represent" alt="">
+                        </a>
+        
+                    <a class="img" href="#">
+                        <img src="https://image.skstoa.com/goods/481/26915481_g.jpg" alt="">
+                        </a>
+        
+                    <a class="img" href="#">
+                        <img src="http://m.sansuyakimchi.com/web/product/big/201704/48_shop1_616046.jpg" alt="">
+                        </a>
+        
+                    <a class="img" href="#">
+                        <img src="https://t1.daumcdn.net/cfile/tistory/99D610335A20DAF728" alt="">
+                        </a> 
+                
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-logo">KIMCHI</div>
+        <div class="footer-content">
+            <h1>“김치”는 한국의 전통음식을 소개하고, 그 전통을 지키기 위한
+                김치 소개 사이트입니다.</h1>
+            <h2>"Kimchi" introduces Korean traditional food and keeps the traditional food
+                This is a kimchi introduction site.</h2>
+        </div>
+    </div>
+
+    
+</body>
+</html>

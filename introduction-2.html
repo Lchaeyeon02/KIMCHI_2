@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹퍼블 기말3</title>
+
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header{
+            display: flex;
+
+            width: 100%;
+            height: 100px;
+
+            padding-left: 40px;
+            padding-right: 80px;
+            padding-top: 8px;
+
+            justify-content: space-between;
+            align-items: center;
+
+            background-color: #372929;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+        }
+
+        .header a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .header h1{
+            font-size: 24px;
+            color: white;
+            
+        }
+
+        .header ul {
+            display: flex;
+            gap: 60px;
+
+            flex: 1;
+            justify-content: flex-end;
+            /* padding-right: 40px; */
+            
+        }
+
+        .header ul li {
+            list-style: none;
+        }
+
+        .header ul li a {
+            text-decoration: none;
+            font-size: 16px;
+            color:rgba(255, 255, 255);
+            opacity: 0.2;
+            transition: opacity 0.3s ease;
+        }
+
+        .header ul li a:hover{
+            opacity: 1;
+        }
+
+        .main{
+            position: relative;
+            width: 100%;
+            height: 720px;
+
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), 
+            url("https://www.bgw.kr/wp-content/uploads/2019/12/%EB%8F%99%EC%B9%98%EB%AF%B8122.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .main-content{
+            /* background-color: aqua; */
+
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            /* align-items: center; */
+            
+        
+        }
+
+        .main-content h1{
+            color: white;
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing :15px;
+            padding-left: 15px;
+            text-align: center;
+            padding-top: 250px;
+        }
+
+        .main-content h2{
+            color: #DBB56C;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: center;
+            padding-top: 4px;
+            letter-spacing :5px;
+            padding-left: 5px;
+        }
+
+        .main-content p{
+            color: #dddddd;
+            font-size: 16px;
+            font-weight: 300;
+            text-align: center;
+            padding-top: 32px;
+            line-height:28px;
+        }
+
+        .intro{
+            background-color: #422222;
+            width: 100%;
+            height: 840px;
+            padding-top: 120px;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .intro-1{
+            /* background-color: aqua; */
+            width: 80vw;
+            height: 100%;
+            
+            display: flex;
+            justify-content: center;
+           
+        }
+
+        .intro-img{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .intro-contents{
+            margin-left: 10vw;
+            text-align: right;
+            padding-top: 40px;
+        }
+
+        .intro-contents h1{
+            color: #DBB56C;
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing :10px;
+            padding-left: 10px;
+            /* text-align: center; */
+            padding-bottom: 80px;
+        }
+
+        .intro-contents h2{
+            color: #dddddd;
+            font-size: 16px;
+            font-weight: 300;
+            /* text-align: center; */
+            padding-bottom: 20px;
+            line-height:35px;
+        }
+
+        .intro-contents h3{
+            color: #dddddd;
+            font-size: 14px;
+            font-weight: 300;
+            /* text-align: center; */
+            /* padding-bottom: 20px; */
+            line-height:30px;
+        }
+
+        .kide{
+            background-color: #DBB56C;
+            width: 100%;
+            height: 945px;
+            padding-top: 60px;
+        }
+
+        .kide-1{
+            /* background-color: #422222; */
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            margin-left: auto;
+            margin-right: auto;
+
+            width: 970px;
+            margin-bottom: 60px;
+        }
+
+        .kide-1 h1{
+            color: #4A2121;
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing :5px;
+            padding-left: 5px;
+            /* text-align: center; */
+            /* padding-bottom: 80px; */
+        }
+
+        .kide-1 h2{
+            color: #4A2121;
+            font-size: 18px;
+            font-weight: 300;
+            /* text-align: center; */
+            /* padding-bottom: 80px; */
+        }
+
+        .kide-contents{
+            margin-left: auto;
+            margin-right: auto;
+
+            width: 970px;
+
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+
+        }
+
+        .kide-contents img{
+            width: 220px;
+            height: 220px;
+            
+            box-shadow:  3px 3px 8px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .img:hover{
+            transform: scale(1.1);
+        }
+
+        .footer{
+            width: 100%;
+            height: 200px;
+            background-color: #372929;
+
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+
+            padding-top: 60px;
+            padding-left: 80px;
+        }
+
+        .footer-logo{
+            color: #dddddd;
+            font-size: 24px;
+            font-weight: 600;
+            
+            
+        }
+
+        .footer-content{
+            margin-left: auto;
+            margin-right: auto;
+            width: 50vw;
+        }
+
+        .footer-content h1{
+            margin-left: auto;
+            margin-right: auto;
+
+            color: #dddddd;
+            font-size: 16px;
+            font-weight: 300;
+            padding-bottom: 8px;
+        }
+
+        .footer-content h2{
+            margin-left: auto;
+            margin-right: auto;
+
+            color: #dddddd;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <h1><a href="index.html">KIMCHI</a></h1>
+
+        <ul>
+            <li><a href="history.html">History</a></li>
+            <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="how to make.html">How to Make</a></li>
+            <li><a href="#">News</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="main-content">
+            <h1>동치미</h1>
+            <h2>dongchim</h2>
+            <p>동치미는 무를 통째로 또는 썰어서 배추, 파, 삭힌 고추, 생강, 배를 넣어 만든 물김치이다. 
+               <br> 시원하고 상큼한 맛으로 어린이들도 쉽게 먹을 수 있는 김치이다.</p>
+        </div>
+    </div>
+
+    <div class="intro">
+        <div class="intro-1">
+        <div class="intro-img">
+            <img src="https://cdn.mkhealth.co.kr/news/photo/201812/img_MKH181213005_0.jpg" 
+            width="410vw" height="320vw" alt="">
+            <img src="https://kormedi.com/wp-content/uploads/2021/12/216174_mf_bimg_011-580x382.jpg" 
+            width="410vw" height="310vh" alt="">
+        </div>
+
+        <div class="intro-contents">
+            <h1>dongchim</h1>
+            <h2>이름처럼 김장철 직전인 겨울에 담가 먹는다. 국물은 시원하고, 깔끔하기 때문에 동치미 국수나 동치미 냉면으로도 즐겨 먹는다. 다른 김치에 비해 숙성기간이 비교적 짧고 낮은 온도에서 서서히 익힌 것이 맑고 시원하다.</h2>
+            <h3>As its name suggests, it is made in winter just before the kimchi-making season. Since the soup is cool and clean, it is also enjoyed as dongchimi noodles or dongchimi cold noodles. Compared to other kimchi, the ripening period is relatively short, and it is clear and cool that it is slowly cooked at low temperatures.
+            </h3>    
+        </div>
+    </div>
+    </div>
+
+    <div class="kide">
+        <div class="kide-1">
+            <h1>Kind of 김치</h1>
+            <h2>다양한 종류의 김치를 구경해보세요.</h2>
+        </div>
+
+        <div class="kide-contents">
+            <a class="img" href="introduction.html">
+                            <img src="http://gdimg.gmarket.co.kr/2299895828/still/600?ver=1639373690" alt="">
+                            </a>
+
+            <a class="img" href="#">
+                <img src="https://simg.ssgcdn.com/trans.ssg?src=/cmpt/edit/202008/10/152020081015250354944596595559_170.jpg&w=830&t=e8d09066de8d0405db1ba4cf6bf7fa7e3e41c27e" alt="">
+                </a>
+
+            
+
+            <a class="img" href="#">
+                <img src="https://www.ghostfreshmart.com/wp-content/uploads/2020/04/%ED%8C%8C%EA%B9%80%EC%B9%98.jpg" alt="">
+                </a>
+
+            <a class="img" href="#">
+                <img src="https://m.convenii.com/web/product/big/202103/d535a2ccfd001232f421ddce9aacaa57.jpg" alt="">
+                </a>
+                <a class="img" href="#">
+                    <img src="https://w.namu.la/s/be7e08d79c6f8f44c6a3a9df7e598c9f83eb9b7127a9064ee4820306de4b134a6debfce9b3b462c43e34ba482448a629c8803d2bab05abdaebf2b067e3370daf78e64a859096236b73c7e7434bc383d1d178db705ef3628b5cf1f9aa41d55d88" alt="">
+                    </a>
+    
+                <a class="img" href="#">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkre-GcNxmUpN7O3_LrX6Z44M1_NYyqb6KLw&usqp=CAU" alt="">
+                    </a>
+    
+                <a class="img" href="#">
+                    <img src="https://jinganebanchan.com/web/product/big/201809/6474e7bb6067bef0ad147fbd696d3f2d.jpg" alt="">
+                    </a>
+    
+                <a class="img" href="#">
+                    <img src="https://static.wtable.co.kr/image/production/service/recipe/230/7b0cc6e4-63c6-4caa-b97c-213fbb9a537c.jpg" alt="">
+                    </a> 
+                    
+                    <a class="img" href="#">
+                        <img src="http://www.saerounkimchi.co.kr/shopimages/saedongne/mobile/5/1047415_represent" alt="">
+                        </a>
+        
+                    <a class="img" href="#">
+                        <img src="https://image.skstoa.com/goods/481/26915481_g.jpg" alt="">
+                        </a>
+        
+                    <a class="img" href="#">
+                        <img src="http://m.sansuyakimchi.com/web/product/big/201704/48_shop1_616046.jpg" alt="">
+                        </a>
+        
+                    <a class="img" href="#">
+                        <img src="https://t1.daumcdn.net/cfile/tistory/99D610335A20DAF728" alt="">
+                        </a> 
+                
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-logo">KIMCHI</div>
+        <div class="footer-content">
+            <h1>“김치”는 한국의 전통음식을 소개하고, 그 전통을 지키기 위한
+                김치 소개 사이트입니다.</h1>
+            <h2>"Kimchi" introduces Korean traditional food and keeps the traditional food
+                This is a kimchi introduction site.</h2>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        (function(w, d, a){
+            w.__beusablerumclient__ = {
+                load : function(src){
+                    var b = d.createElement("script");
+                    b.src = src; b.async=true; b.type = "text/javascript";
+                    d.getElementsByTagName("head")[0].appendChild(b);
+                }
+            };w.__beusablerumclient__.load(a + "?url=" + encodeURIComponent(d.URL));
+        })(window, document, "//rum.beusable.net/load/b221213e192812u353");
+        </script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹퍼블 기말4</title>
+
+    <style>
+
+        
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header{
+            display: flex;
+
+            width: 100%;
+            height: 100px;
+
+            padding-left: 40px;
+            padding-right: 80px;
+            padding-top: 8px;
+
+            justify-content: space-between;
+            align-items: center;
+
+            background-color: #372929;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+        }
+
+        .header a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .header h1{
+            font-size: 24px;
+            color: white;
+            
+        }
+
+        .header ul {
+            display: flex;
+            gap: 60px;
+
+            flex: 1;
+            justify-content: flex-end;
+            /* padding-right: 40px; */
+            
+        }
+
+        .header ul li {
+            list-style: none;
+        }
+
+        .header ul li a {
+            text-decoration: none;
+            font-size: 16px;
+            color:rgba(255, 255, 255);
+            opacity: 0.2;
+            transition: opacity 0.3s ease;
+        }
+
+        .header ul li a:hover{
+            opacity: 1;
+        }
+
+        .process{
+            background-color: #373131;
+            width: 100%;
+            height: 383px;
+            padding-top: 100px;
+            padding-bottom: 64px;
+            padding-right: 25vw;
+            border-bottom: white 2px dashed;
+        }
+
+        .process h1{
+            font-size: 32px;
+            color: white;
+            padding-left: 15vw;
+            
+        }
+
+        .process h2{
+            font-size: 18px;
+            color: #dddddd;
+            font-weight: 300;
+            padding-left: 15vw;
+            padding-top: 48px;
+        }
+
+        .process p{
+            font-size: 16px;
+            color: #DBB56C;
+            font-weight: 300;
+            padding-left: 15vw;
+            padding-top: 24px;
+            /* line-height: 28px; */
+        }
+        
+
+        .intro{
+            background-color: #373131;
+            width: 100%;
+            height: 2160px;
+            padding-top: 100px;
+        
+        }
+
+        .intro-1{
+            /* background-color: aqua; */
+            width: 1130px;
+            height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            /* margin-top: 100px; */
+            /* padding-top: 180px; */
+
+            display: flex;
+            justify-content: center;
+            margin-top: 80px;
+
+            
+        }
+
+        .intro-content1{
+            /* background-color: aquamarine; */
+            width: 500px;
+            margin-left: 130px;
+            padding-top: 120px;
+            
+        }
+
+        .intro-content1 h1{
+            font-size: 20px;
+            color: white;
+            
+
+        }
+
+        .intro-content1 p{
+            font-size: 14px;
+            color: #dddddd;
+            padding-top: 30px;
+            text-align: justify;
+            font-weight: 300;
+            line-height: 28px;
+        }
+
+        .intro-2{
+            /* background-color: aqua; */
+            width: 1130px;
+            height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            /* margin-top: 100px; */
+            /* padding-top: 180px; */
+
+            display: flex;
+            justify-content: center;
+            margin-top: 80px;
+
+            
+        }
+
+        .intro-content2{
+            /* background-color: aquamarine; */
+            width: 500px;
+            margin-right: 130px;
+            padding-top: 120px;
+            
+        }
+
+        .intro-content2 h1{
+            font-size: 20px;
+            color: white;
+            
+
+        }
+
+        .intro-content2 p{
+            font-size: 14px;
+            color: #dddddd;
+            padding-top: 30px;
+            text-align: justify;
+            font-weight: 300;
+            line-height: 28px;
+        }
+
+        .footer{
+            width: 100%;
+            height: 200px;
+            background-color: #372929;
+
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+
+            padding-top: 60px;
+            padding-left: 80px;
+        }
+
+        .footer-logo{
+            color: #dddddd;
+            font-size: 24px;
+            font-weight: 600;
+            
+            
+        }
+
+        .footer-content{
+            margin-left: auto;
+            margin-right: auto;
+            width: 50vw;
+        }
+
+        .footer-content h1{
+            margin-left: auto;
+            margin-right: auto;
+
+            color: #dddddd;
+            font-size: 16px;
+            font-weight: 300;
+            padding-bottom: 8px;
+        }
+
+        .footer-content h2{
+            margin-left: auto;
+            margin-right: auto;
+
+            color: #dddddd;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        /* .intro-img2{
+            transform: rotate(45deg);
+        } */
+
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <h1><a href="index.html">KIMCHI</a></h1>
+
+        <ul>
+            <li><a href="history.html">History</a></li>
+            <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="how to make.html">How to Make</a></li>
+            <li><a href="#">News</a></li>
+        </ul>
+    </div>
+
+    <div class="process">
+        <h1>김장하는 과정</h1>
+        <h2>김장 적정 시기: 일반적으로 일 평균기온이 4도 이하, 최저기온이 0도 이하로 유지 될 때</h2>
+        <p>“맛있는 김장김치를 담그기 위해서는 좋은 원료가 첫 번째 조건이며 배추는 11월 말에 수확된 배추가 가장 맛있다. 한 겨울 월동 배추도 높은 당도를 가지고 있어 좋은 김장재료가 된다.”</p>
+    </div>
+
+    <div class="intro">
+
+        <div class="intro-1">
+            <div class="intro-img1">
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEwMjFfMjEg%2FMDAxNjY2MzI2OTM5Nzg0.DoQrNl7W_dOQ7bVBwY34e7vTQQk0cwmXvb5n6cfijqMg.F532rR4o7EvnKXGw5jXMjaiJ41r4KXlCMhbiXI9NPIwg.JPEG.organicexpo%2F%25B1%25E8%25C0%25E5%25B9%25AB.jpg&type=sc960_832" 
+                width="500px" height="400px" alt="">
+            </div>
+            <div class="intro-content1">
+                <h1>1. 먼저 배추와 무를 준비해둔다.</h1>
+                <p>먼저 신선한 재료들로 구비해놔야한다. 배추의 겉잎이 클 수록, 겹쳐있는 부분이 밀착돼있을수록 좋은 배추이다. 배추의 속을 갈랐을 때 속 안의 중간부분 잎사귀가 연한 노란색을 띄는 것이 알 찬 좋은 배추이다.</p>
+            </div>
+        </div>
+
+        <div class="intro-2">
+            <div class="intro-content2">
+                <h1>2. 배추를 반나절 정도 소금에 절여놓은 후, 
+                    차가운 물에 헹군 다음에 탈수시킨다.</h1>
+                <p>배추를 절일 시 소금물과 함께 절여놓아야 배추의 수분이 유지된다. 배추를 절인 후 뚜껑을 잘 덮어두고, 절이는 중간중간에 배추를 뒤집어준다.</p>
+            </div>
+            <div class="intro-img2">
+                <img src="https://cdn.sommeliertimes.com/news/photo/202111/19835_45323_2558.jpg" 
+                width="500px" height="400px" alt="">
+            </div>
+        </div>
+
+        <div class="intro-1">
+            <div class="intro-img1">
+                <img src="https://m.nongmin.com/upload/bbs/202210/20221028135128778/20221028135128778.jpg" 
+                    width="500px" height="400px"  alt="">
+                </div>
+                <div class="intro-content1">
+                    <h1>3. 무채에 고춧가루를 너고 버무르며 
+                        만들어 놓은 김장 양념을 섞어준다.</h1>
+                    <p>김장양념에는 고춧가루와 쪽파, 멸치 액젓과, 새우젓, 찹쌀풀 다진마늘, 생강 설탕이 들어간다. </p>
+            </div>
+         </div>
+
+         <div class="intro-2">
+            <div class="intro-content2">
+                <h1>4. 절여놓은 배추잎 사이로 양념을 넣고, 
+                    겉잎으로싸서 한포기씩 마무리한다.</h1>
+                <p>배추 정리 및 보관할 때 배추 속이 위로 오게끔 한 포기씩 공기와 접촉되지 않게 꾹꾹 눌러담아야한다.</p>
+            </div>
+            <div class="intro-img2">
+                <img src="https://image.newdaily.co.kr/site/data/img/2019/11/25/2019112500038_0.jpg" 
+                width="500px" height="400px" alt="">
+            </div>
+        </div>       
+    </div>
+
+    <div class="footer">
+        <div class="footer-logo">KIMCHI</div>
+        <div class="footer-content">
+            <h1>“김치”는 한국의 전통음식을 소개하고, 그 전통을 지키기 위한
+                김치 소개 사이트입니다.</h1>
+            <h2>"Kimchi" introduces Korean traditional food and keeps the traditional food
+                This is a kimchi introduction site.</h2>
+        </div>
+    </div>
+
+
+</body>
+</html>
